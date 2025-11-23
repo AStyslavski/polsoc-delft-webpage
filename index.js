@@ -79,8 +79,8 @@ function initDraggableWindows() {
         document.addEventListener('mouseup', endDrag);
 
         // Touch events
-        titleBar.addEventListener('touchstart', startDrag, { passive: false });
-        document.addEventListener('touchmove', doDrag, { passive: false });
+        titleBar.addEventListener('touchstart', startDrag, {passive: false});
+        document.addEventListener('touchmove', doDrag, {passive: false});
         document.addEventListener('touchend', endDrag);
     });
 }
@@ -198,6 +198,11 @@ function onWindowClose(windowId) {
     if (win) {
         win.style.display = 'none';
     }
+}
+
+function closePlayer() {
+    onStopClicked();
+    onWindowClose('music-player-window');
 }
 
 

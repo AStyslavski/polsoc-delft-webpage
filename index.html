@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/x-icon" href="/assets/logo/PolsocLogo.svg">
     <script src="index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <div id="desktop">
@@ -21,14 +22,14 @@
         </div>
     </div>
 
-    <div class="window draggable fit-content" style="left: 42px">
+    <div class="window draggable fit-content" style="left: 8px">
         <div class="title-bar">
             <div class="title-bar-text">Linki</div>
-            <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-            </div>
+            <!--            <div class="title-bar-controls">-->
+            <!--                <button aria-label="Minimize"></button>-->
+            <!--            </div>-->
         </div>
-        <div class="window-body resizable">
+        <div class="window-body resizable" id="links-window-body">
             <p class="double-size" style="margin-top: 0">Zapraszamy na:</p>
             <ul class="double-size">
                 <li>Naszego <a href="https://www.instagram.com/polsoc.delft" target="_blank">Instagrama</a></li>
@@ -46,7 +47,7 @@
             </ul>
         </div>
     </div>
-    <div id="reduta-ordona" class="window draggable fit-content"  style="bottom: 36px; right: 300px">
+    <div id="reduta-ordona" class="window draggable fit-content hide-on-mobile" style="bottom: 36px; right: 300px">
         <div class="title-bar">
             <div class="title-bar-text">redutaordona.txt</div>
             <div class="title-bar-controls">
@@ -58,7 +59,7 @@
         </div>
     </div>
 
-    <div id="our-logo-window" class="window draggable fit-content" style="top: 130px; right: 20px;">
+    <div id="our-logo-window" class="window draggable fit-content hide-on-mobile" style="top: 130px; right: 20px;">
         <div class="title-bar">
             <div class="title-bar-text">Do I look like I know what a "Jaypeg" is?</div>
             <div class="title-bar-controls">
@@ -70,11 +71,11 @@
         </div>
     </div>
 
-    <div class="window fit-content draggable" style="bottom: 0; right: 0;">
+    <div id="music-player-window" class="window fit-content draggable" style="bottom: 0; right: 0;">
         <div class="title-bar">
             <div class="title-bar-text">Cool tunez</div>
             <div class="title-bar-controls">
-                <button aria-label="Close"></button>
+                <button aria-label="Close" onclick="closePlayer()"></button>
             </div>
         </div>
         <div class="window-body">
@@ -96,7 +97,7 @@
         </div>
     </div>
 
-    <div class="window fit-content" style="position: absolute; bottom: 10px;">
+    <div class="window fit-content" style="position: absolute; bottom: 10px; z-index: -1">
         <div class="window-body">
             Background image by
             <a href="https://unsplash.com/@isthisdutta?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
@@ -111,7 +112,7 @@
 </div>
 <div id="toolbar">
     <div class="toolbar-left"></div>
-<!--        <button class="toolbar-button active">Linki</button>-->
+    <!--        <button class="toolbar-button active">Linki</button>-->
     <div class="toolbar-right">
         <div class="time"><span class="hour"></span>:<span class="minutes"></span> AM</div>
     </div>
@@ -119,7 +120,6 @@
 
 </body>
 </html>
-
 
 
 <!--            <div style="font-size: 10px; line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">-->

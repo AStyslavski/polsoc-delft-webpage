@@ -49,16 +49,27 @@ body {
     position: absolute;
 }
 
-.window.resizable {
+.window-body.resizable {
     min-height: 150px;
     min-width: 190px;
-    max-height: max-content;
-    max-width: 700px;
-    overflow-y: auto;
+    /*max-height: max-content;*/
+    max-width: max-content;
+    overflow-x: auto;
     resize: both;
 
     .title-bar {
         touch-action: none;
+    }
+}
+
+#links-window-body {
+    @media screen and (max-height: 600px) {
+        height: 40vh;
+    }
+    
+    @media screen and (max-width: 768px) {
+        max-height: 30vh;
+        max-width: 90vw;
     }
 }
 
@@ -119,9 +130,13 @@ body {
     display: none;
 }
 
+.hide-on-mobile {
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
 
 button:not(:disabled).active {
     box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
     text-shadow: 1px 1px #222;
 }
-
