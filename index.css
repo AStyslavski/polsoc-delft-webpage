@@ -80,7 +80,7 @@ body {
 #desktop {
     position: relative;
     width: 100%;
-    height: calc(100vh - var(--toolbar-height)); /* Adjust 30px to match your toolbar height */
+    height: calc(100dvh - var(--toolbar-height)); /* Adjust 30px to match your toolbar height */
 }
 
 #toolbar {
