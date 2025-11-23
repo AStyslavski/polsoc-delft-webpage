@@ -1,0 +1,127 @@
+:root {
+    --toolbar-height: 33px;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+body {
+    background-image: url("assets/wallpaper-1/ankit-dutta-6-QKq9n8rjI-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: "Pixelated MS Sans Serif", Arial, monospace;
+}
+
+.double-size {
+    font-size: 22px;
+    margin: 11px 0;
+}
+
+.toolbar-button {
+    height: calc(100% - 4px);
+    margin: 2px;
+}
+
+.fit-content {
+    width: fit-content;
+}
+
+.polsoc-logo-pixelated {
+    width: 300px;
+    image-rendering: pixelated;
+    background: white;
+    padding: 10px
+}
+
+.window.draggable {
+    position: absolute;
+}
+
+.window.resizable {
+    min-height: 150px;
+    min-width: 190px;
+    max-height: max-content;
+    max-width: 700px;
+    overflow-y: auto;
+    resize: both;
+
+    .title-bar {
+        touch-action: none;
+    }
+}
+
+.window-body {
+    margin: 0;
+    padding: 8px;
+
+}
+
+.window.draggable .title-bar {
+    cursor: grab;
+    user-select: none;
+}
+
+.window.draggable .title-bar:active {
+    cursor: grabbing;
+}
+
+#desktop {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - var(--toolbar-height)); /* Adjust 30px to match your toolbar height */
+}
+
+#toolbar {
+    background: #c0c0c0;
+    height: var(--toolbar-height);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 2px solid #fff;
+
+    .toolbar-separator {
+        width: 2px;
+        height: 26px;
+        margin-top: 2px;
+        background: #797979;
+        float: left;
+        border-right: 1px solid #fff;
+    }
+
+    .toolbar-right {
+        float: right;
+        margin: 2px 3px;
+        height: 26px;
+        border: 2px solid #7c7c7c;
+        border-bottom-color: #fff;
+        border-right-color: #fff;
+
+        .time {
+            padding: 6px 10px;
+        }
+    }
+}
+
+#music-player-iframe {
+    display: none;
+}
+
+
+button:not(:disabled).active {
+    box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+    text-shadow: 1px 1px #222;
+}
+
