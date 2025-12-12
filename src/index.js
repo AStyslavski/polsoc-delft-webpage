@@ -173,7 +173,7 @@ function updateSongDurationDisplay(position, duration) {
 
 function onPlayClicked() {
     const btn = document.getElementById('music-player-play-pause-button');
-    btn.textContent = "⏸";
+    btn.textContent = "❚❚";
     btn.onclick = onStopClicked;
 
     localStorage.setItem('playTunes', 'true');

@@ -1,3 +1,9 @@
+/* only for media control symbols */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap&text=⏵︎⏹');
+
+/*only for japanese fonts in media player*/
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap&text=リサフランク');
+
 :root {
     --toolbar-height: 33px;
 }
@@ -15,7 +21,7 @@ pre {
 }
 
 body {
-    background-image: url("assets/wallpaper-1/ankit-dutta-6-QKq9n8rjI-unsplash.jpg");
+    background-image: url("../assets/wallpaper-1/ankit-dutta-6-QKq9n8rjI-unsplash.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -51,7 +57,7 @@ body {
 
 .window-body.resizable {
     min-height: 150px;
-    min-width: 190px;
+    min-width: 200px;
     /*max-height: max-content;*/
     max-width: max-content;
     overflow-x: auto;
@@ -66,7 +72,7 @@ body {
     @media screen and (max-height: 600px) {
         height: 40vh;
     }
-    
+
     @media screen and (max-width: 768px) {
         max-height: 30vh;
         max-width: 90vw;
@@ -139,4 +145,16 @@ body {
 button:not(:disabled).active {
     box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
     text-shadow: 1px 1px #222;
+}
+
+#music-player-window {
+    .window-body {
+        p {
+            font-family: "DotGothic16", "Pixelated MS Sans Serif", sans-serif;
+        }
+    }
+}
+
+#music-player-play-pause-button {
+    font-family: "Noto Sans Symbols 2", "Pixelated MS Sans Serif", sans-serif;
 }
