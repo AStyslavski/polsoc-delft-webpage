@@ -18,6 +18,7 @@ function onInit() {
     initDraggableWindows();
     initResizeHandler();
     initMusicPlayer();
+    showMelanzTextAndScheduleHide();
 }
 
 function updateTime() {
@@ -27,6 +28,16 @@ function updateTime() {
         minute: 'numeric',
         hour12: true
     });
+}
+
+function showMelanzTextAndScheduleHide() {
+    document.querySelector('#blinking-melanz-text').style.visibility = 'visible';
+    setTimeout(hideMelanzTextAndScheduleShow, 1000);
+}
+
+function hideMelanzTextAndScheduleShow() {
+    document.querySelector('#blinking-melanz-text').style.visibility = 'hidden';
+    setTimeout(showMelanzTextAndScheduleHide, 500);
 }
 
 function initDraggableWindows() {

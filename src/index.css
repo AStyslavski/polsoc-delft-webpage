@@ -21,13 +21,14 @@ pre {
 }
 
 body {
-    background-image: url("../assets/wallpaper-1/ankit-dutta-6-QKq9n8rjI-unsplash.jpg");
+    background-image: url("../assets/wallpaper-1/mid-fi-ankit-dutta-6-QKq9n8rjI-unsplash.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
     font-family: "Pixelated MS Sans Serif", Arial, monospace;
+    overflow: hidden;
 }
 
 .double-size {
@@ -69,12 +70,14 @@ body {
 }
 
 #links-window-body {
-    @media screen and (max-height: 600px) {
-        height: 40vh;
-    }
+    height: 50vh;
+
+    /*@media screen and (max-height: 600px) {*/
+    /*    height: 55vh;*/
+    /*}*/
 
     @media screen and (max-width: 768px) {
-        max-height: 30vh;
+        max-height: 50vh;
         max-width: 90vw;
     }
 }
