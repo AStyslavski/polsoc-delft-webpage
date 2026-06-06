@@ -166,3 +166,10 @@ button:not(:disabled).active {
 #music-player-play-pause-button {
     font-family: "Noto Sans Symbols 2", "Pixelated MS Sans Serif", sans-serif;
 }
+
+.announcement-image-component {
+    display: block;
+    max-width: 420px;
+    height: auto;
+    image-rendering: pixelated;
+}
