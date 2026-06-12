@@ -21,9 +21,9 @@
         </div>
     </div>
 
-    <div class="window draggable fit-content" style="left: 8px">
+    <div class="window draggable fit-content" style="z-index: 10; left: 8px">
         <div class="title-bar">
-            <div class="title-bar-text">Ogłoszenie</div>
+            <div class="title-bar-text">Drogi Studencie!</div>
             <!--            <div class="title-bar-controls">-->
             <!--                <button aria-label="Minimize"></button>-->
             <!--            </div>-->
@@ -31,30 +31,34 @@
         <div class="window-body resizable" id="links-window-body">
             <h2 style="margin-top: 0.25em; margin-bottom: 0.25em">Zaczynasz studia na TU Delft?</h2>
             <p class="double-size" style="margin-top: 0">Porozmawiaj z obecnymi studentami</p>
-            <p class="standard-size" style="margin-top: 15px">Jeśli zaczynasz studia na TU Delft w roku 26/27 i chcesz porozmawiać z kimś kto już tu studiuje - wypełnij formularz.</p>
-            <p class="standard-size" style="margin-top: 0">Chętnie odpowiemy na pytania o mieszkanie, formalności, życie w Delft i czego spodziewać się na uczelni :)</p>
-            <p class="standard-size" style="margin-top: 0"><a href="https://forms.gle/gqbpfz9rTDeACNZ1A">Link do formularza</a> </p>
+            <p class="standard-size" style="margin-top: 15px">Jeśli zaczynasz studia na TU Delft w roku 26/27 i chcesz
+                porozmawiać z kimś kto już tu studiuje - wypełnij formularz.</p>
+            <p class="standard-size" style="margin-top: 0">Chętnie odpowiemy na pytania o mieszkanie, formalności, życie
+                w Delft i czego spodziewać się na uczelni :)</p>
+            <p class="standard-size" style="margin-top: 0"><a href="https://forms.gle/gqbpfz9rTDeACNZ1A">Link do
+                formularza</a></p>
 
             <h3 style="margin-top: 2em; margin-bottom: 0.25em">Social medias i inne linki:</h3>
-                        <p class="double-size" style="margin-top: 0.25em">Zapraszamy na:</p>
-                        <ul class="double-size">
-                            <li>Naszego <a href="https://www.instagram.com/polsoc.delft" target="_blank">Instagrama</a></li>
-                            <li>Stronę <a href="https://polsoc.eu" target="_blank">Global Polish Student Society</a></li>
-                        </ul>
-                        <p class="double-size">Oraz do naszych kumpli z:</p>
-                        <ul class="double-size">
-                            <li><a href="https://www.instagram.com/polsocamsterdam" target="_blank">Amsterdamu</a></li>
-                            <li><a href="https://www.instagram.com/epar.eur" target="_blank">Rotterdamu</a></li>
-                            <li><a href="https://www.instagram.com/psagroningen" target="_blank">Groningen</a></li>
-                            <li><a href="https://www.instagram.com/polsoc.maastricht" target="_blank">Maastricht</a></li>
-                            <li><a href="https://www.instagram.com/polsocdenhaag" target="_blank">Hagi</a></li>
-                            <li><a href="https://www.instagram.com/polsoceindhoven" target="_blank">Eindhoven</a></li>
-                            <li><a href="https://www.instagram.com/polsoctilburg" target="_blank">Tilburg</a></li>
-                        </ul>
+            <p class="double-size" style="margin-top: 0.25em">Zapraszamy na:</p>
+            <ul class="double-size">
+                <li>Naszego <a href="https://www.instagram.com/polsoc.delft" target="_blank">Instagrama</a></li>
+                <li>Stronę <a href="https://polsoc.eu" target="_blank">Global Polish Student Society</a></li>
+            </ul>
+            <p class="double-size">Oraz do naszych kumpli z:</p>
+            <ul class="double-size">
+                <li><a href="https://www.instagram.com/polsocamsterdam" target="_blank">Amsterdamu</a></li>
+                <li><a href="https://www.instagram.com/epar.eur" target="_blank">Rotterdamu</a></li>
+                <li><a href="https://www.instagram.com/psagroningen" target="_blank">Groningen</a></li>
+                <li><a href="https://www.instagram.com/polsoc.maastricht" target="_blank">Maastricht</a></li>
+                <li><a href="https://www.instagram.com/polsocdenhaag" target="_blank">Hagi</a></li>
+                <li><a href="https://www.instagram.com/polsoceindhoven" target="_blank">Eindhoven</a></li>
+                <li><a href="https://www.instagram.com/polsoctilburg" target="_blank">Tilburg</a></li>
+            </ul>
         </div>
     </div>
 
-    <div id="ogloszenie-plakat" class="window draggable fit-content hide-on-mobile" style="right: 480px; top: 150px;">
+    <div id="ogloszenie-plakat" class="window draggable fit-content hide-on-mobile"
+         style="z-index: 2; left: max(0px, min(917px, 100% - 469px)); top: 150px;">
         <div class="title-bar">
             <div class="title-bar-text">Ogłoszenie</div>
             <div class="title-bar-controls">
@@ -74,7 +78,8 @@
             </div>
         </div>
         <div class="window-body">
-            <iframe style="height: 100%" src="redutaOrdona.html"></iframe>
+            <div id="reduta-ordona-content"
+                 style="font-family: 'Pixelated MS Sans Serif', Arial, monospace; height: 100%; overflow-y: auto;"></div>
         </div>
     </div>
 
@@ -90,7 +95,7 @@
         </div>
     </div>
 
-    <div id="music-player-window" class="window fit-content draggable" style="bottom: 40px; right: 2px;">
+    <div id="music-player-window" class="window fit-content draggable" style="z-index:420; bottom: 40px; right: 2px;">
         <div class="title-bar">
             <div class="title-bar-text">Cool tunez</div>
             <div class="title-bar-controls">
@@ -116,9 +121,18 @@
         </div>
     </div>
 
-    <div class="window fit-content" style="position: absolute; bottom: 10px; z-index: -1">
+    <div class="window fit-content" style="position: absolute; bottom: 10px;">
         <div class="window-body">
-            Background image by Ankit Dutta on Unsplash
+            Background image by
+            <a href="https://unsplash.com/@isthisdutta?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+               target="_blank">
+                Ankit Dutta
+            </a>
+            on
+            <a target="_blank"
+               href="https://unsplash.com/photos/silhouette-of-person-standing-on-rock-formation-near-body-of-water-during-daytime-6-QKq9n8rjI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                Unsplash
+            </a>
         </div>
     </div>
 </div>

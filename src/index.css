@@ -173,3 +173,17 @@ button:not(:disabled).active {
     height: auto;
     image-rendering: pixelated;
 }
+
+#ogloszenie-plakat .window-body {
+    height: 80vh;
+    max-height: max-content;
+    min-height: 150px;
+    overflow-y: auto;
+    resize: vertical;
+}
+
+@media screen and (max-height: 800px) {
+    #ogloszenie-plakat .window-body {
+        height: 55vh;
+    }
+}

@@ -19,6 +19,20 @@ function onInit() {
     initResizeHandler();
     initMusicPlayer();
     showMelanzTextAndScheduleHide();
+    loadEmbeddedContent('reduta-ordona-content', 'redutaOrdona.html');
+}
+
+function loadEmbeddedContent(targetId, url) {
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    fetch(url)
+        .then(res => res.text())
+        .then(html => {
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            target.innerHTML = doc.body.innerHTML;
+        })
+        .catch(err => console.error('Failed to load ' + url, err));
 }
 
 function updateTime() {
@@ -40,6 +54,13 @@ function hideMelanzTextAndScheduleShow() {
     setTimeout(showMelanzTextAndScheduleHide, 500);
 }
 
+let topZIndex = 100;
+
+function bringToFront(win) {
+    topZIndex += 1;
+    win.style.zIndex = topZIndex;
+}
+
 function initDraggableWindows() {
     const windows = document.querySelectorAll('.window.draggable');
     const desktop = document.getElementById('desktop');
@@ -48,6 +69,10 @@ function initDraggableWindows() {
         const titleBar = win.querySelector('.title-bar');
         let isDragging = false;
         let offsetX, offsetY;
+
+        // Raise the window above the others whenever it's clicked/tapped anywhere.
+        win.addEventListener('mousedown', () => bringToFront(win));
+        win.addEventListener('touchstart', () => bringToFront(win), {passive: true});
 
         function startDrag(e) {
             isDragging = true;
@@ -184,7 +209,7 @@ function updateSongDurationDisplay(position, duration) {
 
 function onPlayClicked() {
     const btn = document.getElementById('music-player-play-pause-button');
-    btn.textContent = "❚❚";
+    btn.textContent = "❚❚︎";
     btn.onclick = onStopClicked;
 
     localStorage.setItem('playTunes', 'true');
@@ -193,7 +218,7 @@ function onPlayClicked() {
 
 function onStopClicked() {
     const btn = document.getElementById('music-player-play-pause-button');
-    btn.textContent = "▶";
+    btn.textContent = "▶︎";
     btn.onclick = onPlayClicked;
 
     localStorage.setItem('playTunes', 'false');
