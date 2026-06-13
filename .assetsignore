@@ -1,0 +1,7 @@
+# Files Wrangler should NOT upload to Cloudflare Pages.
+# (.git is skipped automatically; listed here for clarity.)
+.git/
+.idea/
+.gitignore
+.assetsignore
+src/

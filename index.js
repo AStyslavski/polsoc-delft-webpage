@@ -19,20 +19,6 @@ function onInit() {
     initResizeHandler();
     initMusicPlayer();
     showMelanzTextAndScheduleHide();
-    loadEmbeddedContent('reduta-ordona-content', 'redutaOrdona.html');
-}
-
-function loadEmbeddedContent(targetId, url) {
-    const target = document.getElementById(targetId);
-    if (!target) return;
-
-    fetch(url)
-        .then(res => res.text())
-        .then(html => {
-            const doc = new DOMParser().parseFromString(html, 'text/html');
-            target.innerHTML = doc.body.innerHTML;
-        })
-        .catch(err => console.error('Failed to load ' + url, err));
 }
 
 function updateTime() {
